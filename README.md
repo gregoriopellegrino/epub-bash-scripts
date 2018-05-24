@@ -3,7 +3,7 @@ A collection of bash scripts (developed on Mac) that can help in the making of  
 ## Getting started
 
  - install *pup*: https://github.com/ericchiang/pup
- - download scripts: 
+ - download the scripts: `git clone https://github.com/gregoriopellegrino/epub-bash-scripts`
 ## Scripts
 ### assignTitles<span></span>.sh
 This script replace the `<title>` value of each HTML document in the EPUB with the first  occurance of the most important heading in it.
@@ -27,3 +27,5 @@ This script converts `px` values (in CSS) to `em`.
  1. Some of the scripts use regex for HTML manipulation: please note that HTML should not be regexed! The end is nigh.
  2. Pixels should not be transformed in em: pixels are an absolute unit of measures, ems depends on the parent element (https://stackoverflow.com/a/4575518)
  3. Use these script at your own risk!
+## License
+MIT License https://github.com/gregoriopellegrino/epub-bash-scripts/blob/master/LICENSE
