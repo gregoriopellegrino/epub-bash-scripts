@@ -14,8 +14,8 @@
 version="1.0"
 dir_path="$1"
 
-find $dir_path -name '*.css' |
+find "$dir_path" -name '*.css' |
 while read file_path; do
     echo "$file_path"
-	perl -p -i -e 's/(\d+)px/($1\/16).em/ge' $file_path
+	perl -p -i -e 's/(\d+)px/($1\/16).em/ge' "$file_path"
 done
