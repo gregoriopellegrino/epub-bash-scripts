@@ -15,9 +15,9 @@
 version="1.0"
 dir_path="$1"
 
-find $dir_path -name '*.xhtml' -or -name '*.html' |
+find "$dir_path" -name '*.xhtml' -or -name '*.html' |
 while read file_path; do
-	elements=$(cat $file_path | pup -l 0 --charset utf8 '[epub:type]:not([role])')
+	elements=$(cat "$file_path" | pup -l 0 --charset utf8 '[epub:type]:not([role])')
 
 	echo "$file_path"
 
@@ -82,7 +82,7 @@ while read file_path; do
 				new_tag=${open_tag/>/ role=\"$role\">}
 				#echo "$open_tag"
 				#echo "$new_tag"
-				sed -i '' -e "s/$open_tag/$new_tag/g" $file_path
+				sed -i '' -e "s/$open_tag/$new_tag/g" "$file_path"
 			fi
 		fi
 	done <<< "$elements"
